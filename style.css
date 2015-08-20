@@ -1,0 +1,87 @@
+body {
+  text-align:center;
+
+  }
+  .jumbotron {
+    background:#2979FF;
+    color:white;
+    box-shadow: 1px 5px 2px lightGrey;
+    height:135px;
+    font-family: 'Raleway', sans-serif;
+  }
+  #strip {
+    background:#1565C0;
+    height:20px;
+    position:relative;
+    top:-165px;
+  }
+  .container-fluid {
+  /*background-color:lightGrey;*/
+  width:90%;
+  margin: 0 auto;
+}
+.row{
+  height:127px;
+}
+#meal {
+  background:lightGrey;
+  height:400px;
+  margin:0 10px;
+  border:1px solid blue;
+
+
+}
+#customer {
+  background:lightGrey;
+  height:190px;
+  /*margin:10px;*/
+
+}
+#text {
+  left:-60px;
+  position:relative;
+  font-size:1.1em;
+  font-family: 'Droid Serif', serif;
+
+}
+#earn {
+  background:lightGrey;
+  height:190px;
+  margin-top:-79px;
+  margin-bottom:10px;
+}
+span {
+  color:blue;
+  font-size:1.3em;
+
+}
+.main {
+  width:90%;
+  margin: 0 auto;
+}
+input {
+  width:60%;
+  display:inline-block;
+  padding:5px;
+  margin:10px;
+}
+#submit {
+  float:left;
+  width: 40%;
+  margin-left: 20px;
+  margin-top:20px;
+}
+#cancel {
+  width:40%;
+  margin-top:20px;
+}
+#reset {
+  width:20%;
+  position:absolute;
+  bottom:-20px;
+  right:170px;
+  margin-bottom:10px;
+}
+#form {
+  width:90%;
+}

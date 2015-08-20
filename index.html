@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+  <html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js">
+     </script>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+     <link rel="stylesheet" href="style.css">
+     <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+</head>
+<body ng-controller="calculator as app">
+
+  <div class="jumbotron">   <h1> <i class="fa fa-black-tie"></i> Waitstaff Calculator</h1>
+    </div>
+    <div id='strip'></div>
+
+  <section class="container-fluid">
+
+<div class="main">
+  <div class="col-xs-6" id="meal">
+
+      <h4><i class="fa fa-cutlery"></i> Enter the Meal Details</h4>
+      <hr>
+      <form name="app.info" ng-submit="app.addTip(app.price, app.tax, app.tipP)" id="form">
+      <input id="price" type="text" ng-model="app.price" placeholder="Price">
+      <input id="tax" type="text" ng-model="app.tax" placeholder="Tax">
+      <input id="tipP" type="tipP" ng-model="app.tipP" placeholder="Tip">
+      <!-- ng-click="app.addTip()" <--><br>
+<button class="btn btn-primary btn-success" type="submit" id="submit">Submit</button>
+<button class="btn btn-primary btn-default"   type="button" id="cancel" ng-click="app.cancel()">Cancel</button>
+</form>
+  </div>  <!-- top -->
+    <div class="col-xs-5 " id="customer" ><h4><i class="fa fa-users"></i> Customer Charges</h4>
+        <hr>
+<div id="text">
+    <p>Subtotal: <span ng-show="(app.info.$submitted)">{{app.subtotal | currency}}</span></p>
+      <p>Tip: <span ng-show="(app.info.$submitted)">{{ app.tip | currency}}</span></p>
+    <p>  Total: <span ng-show="(app.info.$submitted)">{{app.total | currency}}</span></p>
+</div>
+        <div class="row">
+            <div class=" col-xs-6" ></div>
+        </div>
+        <!-- bottom -->
+        <div class="row" id="earn"><h4><i class="fa fa-money"></i> Earnings info</h4>
+          <hr>
+          <div id="text">
+          <p>Tip Total: <span>{{app.tipT | currency}}</span></p>
+          <p>Meal Count: <span>{{app.mealCount }}</span></p>
+          <p>Avg Tip: <span>{{ app.avgTip | currency}}</span></p>
+        </div>
+            <div class="col-xs-5 " >
+
+            </div>
+        </div>
+    </div>
+  <!-- left -->
+</div>
+
+  </div>
+  <button class="btn btn-primary btn-danger" id="reset"ng-click="app.resetForm()">Reset</button>
+
+</section>
+
+
+<script src="app.js"></script>
+</body>
+</html>
